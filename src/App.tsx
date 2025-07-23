@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import Demandas from "./pages/Demandas";
 import Agenda from "./pages/Agenda";
 import Clientes from "./pages/Clientes";
+import Prospects from "./pages/Prospects";
 import Usuarios from "./pages/Usuarios";
 import Atividades from "./pages/Atividades";
 import NotFound from "./pages/NotFound";
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/demandas" element={<Demandas />} />
             <Route path="/agenda" element={<Agenda />} />
             <Route path="/clientes" element={<Clientes />} />
+            <Route path="/prospects" element={<Prospects />} />
             <Route path="/usuarios" element={<Usuarios />} />
             <Route path="/atividades" element={<Atividades />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CalendarDays, Clock, TrendingUp, Users, CheckCircle, AlertCircle, Timer, FileText } from "lucide-react";
+import { CalendarDays, Clock, TrendingUp, Users, CheckCircle, AlertCircle, Timer, FileText, Target } from "lucide-react";
 
 export default function Dashboard() {
   // Mock data - será substituído por dados reais da API
@@ -10,7 +10,9 @@ export default function Dashboard() {
     inProgress: 6,
     completed: 10,
     clients: 12,
-    todayEvents: 3
+    todayEvents: 3,
+    prospects: 8,
+    newProspects: 3
   };
 
   const recentTasks = [
@@ -53,7 +55,7 @@ export default function Dashboard() {
       </div>
 
       {/* Stats Grid */}
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total de Tarefas</CardTitle>
@@ -102,6 +104,19 @@ export default function Dashboard() {
             <div className="text-2xl font-bold">{stats.clients}</div>
             <p className="text-xs text-muted-foreground">
               2 novos este mês
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Prospects Ativos</CardTitle>
+            <Target className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{stats.prospects}</div>
+            <p className="text-xs text-muted-foreground">
+              {stats.newProspects} novos esta semana
             </p>
           </CardContent>
         </Card>

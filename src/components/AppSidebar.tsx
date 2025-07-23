@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { LayoutDashboard, KanbanSquare, Calendar, Users, UserCheck, Activity } from "lucide-react";
+import { LayoutDashboard, KanbanSquare, Calendar, Users, UserCheck, Activity, Target } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
@@ -21,6 +21,7 @@ const menuItems = [
   { title: "Demandas", url: "/demandas", icon: KanbanSquare },
   { title: "Agenda", url: "/agenda", icon: Calendar },
   { title: "Clientes", url: "/clientes", icon: Users },
+  { title: "Prospects", url: "/prospects", icon: Target },
   { title: "Usuários", url: "/usuarios", icon: UserCheck },
   { title: "Atividades", url: "/atividades", icon: Activity },
 ];
